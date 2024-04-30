@@ -1,4 +1,5 @@
-# HALF_ADDER_SUBTRACTOR
+# EXPERIMENT : HALF_ADDER_SUBTRACTOR
+# DATE :
 
 Implementation-of-Half-Adder-and-Half Subtractor-circuit
 
@@ -34,6 +35,7 @@ Borrow = A’B
 Figure -02 HALF Subtractor
 
 **Truthtable**
+![DE E-3 truthtable](https://github.com/04Varsha/HALF_ADDER_SUBTRACTOR/assets/149035374/c06bba9c-9c1e-4e92-a1e3-869583ce44c7)
 
 **Procedure**
 
@@ -49,13 +51,33 @@ Figure -02 HALF Subtractor
 
 
 **Program:**
-
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+~~~
+module EX03(a,b,sum,carry,D,Bo); 
+input a,b; 
+output sum,carry,D,Bo;
+xor g1(sum,a,b);
+and g2(carry,a,b); 
+wire abar; 
+not g3(abar,a); 
+xor g4(D,a,b); 
+and g5(Bo,abar,b); 
+endmodule
 
-Developed by: RegisterNumber:*/
+Developed by: S.HARISH
+RegisterNumber: 212223040062
+~~~
+
+*/
+
 
 **RTL Schematic**
 
+![318335096-90716de4-b5ed-4674-98d5-51daa65ac1f7](https://github.com/04Varsha/HALF_ADDER_SUBTRACTOR/assets/149035374/217ae264-d9ba-4625-bd4f-555dd8bdaf61)
+
 **Output/TIMING Waveform**
 
+![318335195-5ac0a2d5-9c87-4c85-9109-76a689d6d841](https://github.com/04Varsha/HALF_ADDER_SUBTRACTOR/assets/149035374/0c936ddf-4579-4971-805e-0393520e814a)
+
 **Result:**
+Implementation-of-Half-Adder-and-Half Subtractor-circuit is excuted sucessfully.
